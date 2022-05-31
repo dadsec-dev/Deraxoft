@@ -1,0 +1,66 @@
+/*MEDIA QUERIES FILE,,,, MEDIA QUERIES ARE FOR DEVICES THAT ARE LESS THAN 600PIXELS*/
+
+@media screen and (max-width: 600px) {
+    /*This means for all device width, 600px and below we apply these settings to them*/
+    .nav-ul{
+        /*this puts the ul list items on its own line because of the flex wrap property in the main css file*/
+        width: 100%;
+        flex-direction: column;
+        /*this hides the menu */
+        display: none;
+        margin-top: 1rem;
+        
+      }
+
+    .nav-ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid white;
+        transition: all .3s;
+    }
+
+
+    .nav-ul li:last-child {
+        border-bottom: 1px solid white;
+    }
+
+    .nav-link::before,
+    .current::before {
+        display: none;
+    }
+
+    .hamburger {
+    /*this displays the hamburger which onclick will open the navbar list items(we will do this logic in js)*/
+        display: block;
+    }
+
+    .nav-ul .close{
+        display: block;
+    }
+
+    /*These are the classes we will toggle with js*/
+    .show {
+        display: flex;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .intro-text {
+        width: 100%;
+    }
+
+    .intro-text h1{
+        font-size: 6rem;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact > * {
+        margin: 3rem 0;
+    }
+    
+}
